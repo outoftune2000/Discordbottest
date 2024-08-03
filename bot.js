@@ -15,7 +15,7 @@ const commands = [
     },
 ];
 
-// Register the slash command
+
 const rest = new REST({ version: '9' }).setToken(TOKEN);
 
 (async () => {
