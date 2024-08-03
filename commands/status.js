@@ -19,7 +19,7 @@ module.exports = {
       });
 
       if (response.status === 200) {
-        await interaction.editReply('');
+        await interaction.editReply(' ');
       } else {
         await interaction.editReply('Bot is up and running! But there was an issue sending the POST request.');
       }
