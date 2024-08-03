@@ -6,7 +6,6 @@ require('dotenv').config();
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 client.commands = new Collection();
 
-// Load command files
 const commandFiles = fs.readdirSync(path.join(__dirname, 'commands')).filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
@@ -14,7 +13,6 @@ for (const file of commandFiles) {
   client.commands.set(command.data.name, command);
 }
 
-// Load event files
 const eventFiles = fs.readdirSync(path.join(__dirname, 'events')).filter(file => file.endsWith('.js'));
 
 for (const file of eventFiles) {
