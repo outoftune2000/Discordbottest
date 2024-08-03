@@ -13,5 +13,11 @@ RUN npm install
 # Copy local code to the container image.
 COPY . .
 
+# Change the ownership of the directory to a non-root user
+RUN chown -R node:node /usr/src/app
+
+# Switch to the non-root user
+USER node
+
 # Run the web service on container startup.
-CMD [ "node", "bot.js" ]
+CMD ["node", "index.js"]
