@@ -20,9 +20,9 @@ module.exports = {
       });
 
       if (response.status === 200) {
-        await interaction.editReply(' ');
+        await interaction.editReply('... ');
       } else {
-        await interaction.editReply(' ');
+        await interaction.editReply('... ');
       }
     } catch (error) {
       console.error('Error sending POST request:', error);
