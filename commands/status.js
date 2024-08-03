@@ -13,13 +13,13 @@ module.exports = {
 
     try {
       const response = await axios.post('https://n8n-production-f121.up.railway.app/webhook/1468d11d-7913-42d4-a3cd-012f9d7d99d1', {
-        status: 'Bot is up and running!',
+        status: '....',
         channelId: channelId,
         guildId: guildId
       });
 
       if (response.status === 200) {
-        await interaction.editReply('Bot is up and running! POST request sent successfully.');
+        await interaction.editReply('');
       } else {
         await interaction.editReply('Bot is up and running! But there was an issue sending the POST request.');
       }
